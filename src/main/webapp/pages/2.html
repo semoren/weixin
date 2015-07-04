@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>基因检测结果</title>
+<link href="../common/bootstrap-3.0.3/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<style type="text/css">
+#go {
+	background-color: #f5f5f5;
+	border: 0px solid #c0c3c9;
+	text-align: center;
+	z-index: 1;
+	position: fixed;
+	width: 100%;
+	_position: absolute;
+}
+
+/* #more { */
+/* 	width: 50%; */
+/* 	z-index: 999; */
+/* 	top: 0px; */
+/* 	background-color: #f5f5f5; */
+/* 	margin-left: 50%; */
+/* 	height: 500px; */
+/* 	position: absolute; */
+/* } */
+#more {
+	position: fixed;
+	left: 50%;
+	width: 50%;
+	top: 0px;
+	visibility: hidden;
+	background-color: white;
+	z-index: 20;
+}
+
+#mask {
+	background: #000;
+	opacity: 0.5;
+	filter: alpha(opacity = 0.5);
+	height: 1000px;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10;
+}
+
+td {
+	text-indent: 10px;
+}
+</style>
+</head>
+<body>
+	<div id="go">
+		<button id="go1" class="btn btn-primary btn-block btn-success"
+			onclick="">检查项目：肺腺癌</button>
+	</div>
+	<br>
+	<br>
+	<div class="panel panel-default">
+		<div class="panel-heading">&nbsp;&nbsp;检测说明</div>
+		<div class="panel-body">
+			<p>肺腺癌 （Lung
+				Adenocarcinoma）是肺癌的一种，属于非小细胞癌。不同于鳞状细胞肺癌，肺腺癌较容易发生于女性及不抽烟者。起源于支气管粘膜上皮，少数起源于大支气管的粘液腺。发病率比鳞癌和未分化癌低，发病年龄较小，女性相对多见。多数腺癌起源于较小的支气管，为周围型肺癌。早期一般没有明显的临床症状，往往在胸部X线检查时被发现。表现为圆形或椭圆形肿块，一般生长较慢，但有时早期即发生血行转移。淋巴转移则发生较晚。
+			</p>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">&nbsp;&nbsp;遗传贡献率&nbsp;低</div>
+		<div class="panel-body">
+			<p>目前的科学研究认为肺腺癌的遗传贡献率低，因此环境因素则是疾病发生的主导因素，包括吸烟、吸入二手烟、接触有毒化学品和空气质量等。
+			</p>
+		</div>
+	</div>
+	<div class="panel panel-default">
+		<div class="panel-heading">&nbsp;&nbsp;建议生活习惯</div>
+		<div class="panel-body">
+			<dl>
+				<dt>不吸烟</dt>
+				<dd>
+					<p>吸烟是导致肺癌的重要因素，具有10年以上吸烟史的人群，肺癌的发病率是非吸烟人群的一倍以上。</p>
+				</dd>
+				<dt>尽量避免接触有害气雾</dt>
+				<dd>
+					<p>如二手烟、油烟、蚊香、熏香、燃煤、燃气、尾气、垃圾焚烧污染等物质。</p>
+				</dd>
+				<dt>及时积极治疗慢性肺部疾病</dt>
+				<dd>
+					<p>如慢性支气管炎、慢性肺部炎症、肺结核、肺部瘢痕病灶、尘肺等。</p>
+					<p>具有右侧特征的人群，应每年做1～2次胸片、痰检
+						（1）年龄40岁以上，每日吸烟20支以上，或吸烟指数>400（吸烟支数/天×吸烟年限）者，应当定期做胸透、痰细胞学检查，最好每半年1次；（2）有肿瘤家族史；（3）患有肺部慢性疾病，慢性支气管炎，肺结核等；（4）经常接触煤烟或油烟、砷、铬、镍、氡等放射性物质，石棉、粉尘等的工作人员。</p>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<div id="more">
+		<table class="table">
+			<tbody>
+				<tr>
+					<td style="background-color: #5cb85c;">肺腺癌</td>
+				</tr>
+				<tr>
+					<td>肺鳞癌</td>
+				</tr>
+				<tr>
+					<td>小细胞肺癌</td>
+				</tr>
+				<tr>
+					<td align="center"><a data-toggle="modal"
+						data-backdrop="static" data-target="#myModal">查看更多检查项</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div>
+		<button class="btn btn-primary btn-lg btn-block btn-success"
+			style="width: 80%; margin: auto;" onclick="showdiv();">查看更多检测服务</button>
+	</div>
+	<!-- 模态框（Modal） -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">×</button>
+					<h4 class="modal-title" id="myModalLabel" align="center">温馨提示</h4>
+				</div>
+				<div class="modal-body"><p>您享有的基因检测服务只提供了这几项检测 , 想要更了解自己的身体状况 , 您需购买对应保额的保险服务<p><p>是否现在购买?</p></div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">我不想买
+					</button>
+					<a href="3.html">
+					<button type="button" class="btn btn-primary">现在购买</button>
+					</a>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	<script src="../common/jquery-2.0.0/jquery-2.0.0.min.js"></script>
+	<script src="../common/bootstrap-3.0.3/dist/js/bootstrap.js"></script>
+	<script type="text/javascript">
+		function showdiv() {
+			//获取页面的高度和宽度
+			var sHeight = document.documentElement.scrollHeight + "px";
+			var sWidth = document.documentElement.scrollWidth + "px";
+			//设置div的高度和可见性
+			$('#more').css('height', sHeight);
+			$('#more').css('visibility', 'visible');
+			//创建遮罩层
+			var oMask = document.createElement("div");
+			oMask.id = "mask";
+			oMask.style.height = sHeight + "px";
+			oMask.style.width = sWidth + "px";
+			document.body.appendChild(oMask);
+
+			//点击弹出框以外的区域也可以关闭登陆框
+			oMask.onclick = function() {
+				$('#more').css('visibility', 'hidden');
+				document.body.removeChild(oMask);
+			}
+		}
+	</script>
+</body>
+</html>
