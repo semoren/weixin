@@ -37,6 +37,6 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<finalName>WeiXin</finalName>
+		<finalName>weixin</finalName>
 	</build>
 </project>
